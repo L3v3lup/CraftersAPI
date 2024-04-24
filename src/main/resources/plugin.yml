@@ -1,0 +1,4 @@
+name: CraftersAPI
+version: '${project.version}'
+main: com.craftersapi.CraftersAPI
+api-version: '1.20'
