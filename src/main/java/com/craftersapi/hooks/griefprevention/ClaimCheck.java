@@ -1,4 +1,4 @@
-package com.craftersapi.hooks;
+package com.craftersapi.hooks.griefprevention;
 
 import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.ClaimPermission;
@@ -32,5 +32,12 @@ public class ClaimCheck  {
             return canBuild == null;
         }
         return true;
+    }
+
+    public boolean isClaimOnBlock(Location location) {
+        GriefPrevention api = getAPI();
+        Claim claim = api.dataStore.getClaimAt(location, true, null);
+
+        return claim != null;
     }
 }
